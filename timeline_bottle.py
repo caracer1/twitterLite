@@ -5,57 +5,60 @@ from bottle import request, response
 from bottle import post, get, put, delete
 import bottle
 
-
-
-
 @get('/timeline/usertimeline/<username>/')
 def getUserTimeline(username):
 
-    list_obj=[]
-
-    response.headers['Content-Type'] = 'application/json'
-    return json.dump({'timeline':str(list_obj)})
-
-
-    
-       
+##    list_obj=[]
+##
+##
+##
+##    response.headers['Content-Type'] = 'application/json'
+##    return json.dump({'timeline':str(list_obj)})
+    test = "Hello, world"
+    return test      
 @get('/timeline/usertimeline/')
 def getPublicTimeline():
-    user_obj=[]
-    list_obj=[]
+##    user_obj=[]
+##    list_obj=[]
+##
+##    response.headers['Content-Type'] = 'application/json'
+##    return json.dump({'timeline':str(user_obj)})
+    test = "Hello, world"
+    return test   
 
-    response.headers['Content-Type'] = 'application/json'
-    return json.dump({'timeline':str(user_obj)})
 
 @get('/timeline/hometimeline/<username>/')
 def getUserTimeline(username):
-
-    list_obj=[]
-
-    response.headers['Content-Type'] = 'application/json'
-    return json.dump({'timeline':str(list_obj)})
-
+##
+##    list_obj=[]
+##
+##    response.headers['Content-Type'] = 'application/json'
+##    return json.dump({'timeline':str(list_obj)})
+    test = "Hello, world"
+    return test 
 
     
 
 @post('/users/')
 def user_creation():
     '''Handles name creation'''
-    try:
-        # parse input data
-        try:
-            data = request.json()
-        except:
-            raise ValueError
-        if data is None:
-            raise ValueError
-        username=data['username']  
-        text=data['text']
-        response.status = "200 OK"
-    except:
-        response.status = "400 invalid"
-    finally:
-        return response.status  
+##    try:
+##        # parse input data
+##        try:
+##            data = request.json()
+##        except:
+##            raise ValueError
+##        if data is None:
+##            raise ValueError
+##        username=data['username']  
+##        text=data['text']
+##        response.status = "200 OK"
+##    except:
+##        response.status = "400 invalid"
+##    finally:
+##        return response.status  
+    test = "Hello, world"
+    return test
 
 if __name__ == '__main__':
     bottle.run(host = '127.0.0.1', port = 8001) 
